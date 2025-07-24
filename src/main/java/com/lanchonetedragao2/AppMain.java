@@ -12,6 +12,7 @@ public class AppMain extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(AppMain.class.getResource("telaPrincipal.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
         stage.setResizable(false);
         stage.setTitle("Lanchonete Dragão");
         stage.setScene(scene);
