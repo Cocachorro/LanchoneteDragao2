@@ -1,24 +1,46 @@
 @font-face {
     font-family:'Bright Aura';
-    src: url('fonts/BrightAura.otf');
+    src: url('fonts/BrightAura/BrightAura.otf');
+}
+@font-face {
+    font-familly:'QuicksandRegular';
+    src: url('fonts/Quicksand/Quicksand-Regular.ttf');
+}
+@font-face {
+    font-family:'QuicksandBold';
+    src: url('fonts/Quicksand/Quicksand-Bold.ttf');
 }
 .titulo{
-    -fx-font-family: 'Bright Aura';
+    -fx-font-family: 'QuicksandBold';
+    -dx-font-weight: bold;
     -fx-font-size: 32px;
     -fx-text-fill: #F47A2D;
 }
+.subTitulo {
+    -fx-font-family: 'QuicksandRegular';
+    -fx-font-size: 24px;
+    -fx-text-fill: #5D4037;
+}
 .textoNormal{
-    -fx-font-family: 'Bright Aura';
+    -fx-font-family: 'QuicksandRegular';
     -fx-font-size: 20px;
     -fx-text-fill: #5D4037;
 }
 .botao{
-    -fx-font-family: 'Bright Aura';
-    -fx-font-size: 22px;
+    -fx-font-family: 'QuicksandBold';
+    -fx-background-color: #eed19d;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px;
+    -fx-font-size: 20px;
     -fx-text-fill: #C6422C;
 }
+.botao:hover{
+    -fx-background-color: #dcb97e;
+    -fx-text-fill: #C6422C;
+    -fx-cursor: hand;
+}
 .secundario{
-    -fx-font-family: 'Bright Aura';
+    -fx-font-family: 'QuicksandRegular';
     -fx-font-size: 16px;
     -fx-text-fill: #A1A1A1;
 }

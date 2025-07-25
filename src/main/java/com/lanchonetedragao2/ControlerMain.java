@@ -2,13 +2,14 @@ package com.lanchonetedragao2;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 
 public class ControlerMain {
     @FXML
-    private Label welcomeText;
+    private Pane pnlMenu;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    protected void btnMenuClick() {
+        pnlMenu.setVisible(!pnlMenu.isVisible());
     }
 }
