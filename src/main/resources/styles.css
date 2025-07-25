@@ -3,7 +3,7 @@
     src: url('fonts/BrightAura/BrightAura.otf');
 }
 @font-face {
-    font-familly:'QuicksandRegular';
+    font-family:'QuicksandRegular';
     src: url('fonts/Quicksand/Quicksand-Regular.ttf');
 }
 @font-face {
@@ -12,7 +12,8 @@
 }
 .titulo{
     -fx-font-family: 'QuicksandBold';
-    -dx-font-weight: bold;
+    -fx-font-weight: bold;
+    -fx-underline: true;
     -fx-font-size: 32px;
     -fx-text-fill: #F47A2D;
 }
@@ -43,4 +44,34 @@
     -fx-font-family: 'QuicksandRegular';
     -fx-font-size: 16px;
     -fx-text-fill: #A1A1A1;
+}
+.lista{
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+.lista .list-cell{
+    -fx-font-family: 'QuicksandRegular';
+    -fx-font-size: 16px;
+    -fx-text-fill: #5D4037;
+    -fx-padding: 0 0 20px 0;
+    -fx-background-color: transparent;
+}
+.spinner{
+    -fx-font-family: 'QuicksandBold';
+}
+.spinner .text-field{
+    -fx-font-size: 14px;
+    -fx-text-fill: #5D4037;
+    -fx-background-color: white, #eed19d;
+    -fx-background-insets: 0, 1;
+}
+.spinner .arrow-button{
+    -fx-background-color: #eed19d;
+    -fx-background-radius: 0 5 5 0;
+}
+.spinner .arrow-button:hover{
+    -fx-background-color: #dcb97e;
+}
+.spinner .arrow{
+    -fx-background-color: #C6422C;
 }
