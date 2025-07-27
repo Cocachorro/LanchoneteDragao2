@@ -36,12 +36,60 @@
          <children>
             <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Sanduíches" />
             <Button layoutX="264.0" layoutY="287.0" mnemonicParsing="false" onAction="#btnSandConfirm" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Confirmar" />
-            <Spinner fx:id="spnSanduiche" editable="true" layoutX="324.0" layoutY="59.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner"/>
-            <Spinner fx:id="spnPastel" editable="true" layoutX="324.0" layoutY="104.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner"/>
-            <Spinner fx:id="spnSorvete" editable="true" layoutX="324.0" layoutY="148.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner"/>
-            <Spinner fx:id="spnAlcool" editable="true" layoutX="324.0" layoutY="194.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner"/>
-            <Spinner fx:id="spnNAlcool" editable="true" layoutX="324.0" layoutY="239.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner"/>
+            <Spinner fx:id="spnSanduiche1" editable="true" layoutX="324.0" layoutY="59.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnSanduiche2" editable="true" layoutX="324.0" layoutY="104.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnSanduiche3" editable="true" layoutX="324.0" layoutY="148.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnSanduiche4" editable="true" layoutX="324.0" layoutY="194.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnSanduiche5" editable="true" layoutX="324.0" layoutY="239.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
             <ListView fx:id="lstSanduiche" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="285.0" styleClass="lista" />
+         </children>
+      </Pane>
+      <Pane fx:id="pnlPastel" layoutX="81.0" layoutY="99.0" prefHeight="337.0" prefWidth="413.0" visible="false">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Pasteis" />
+            <Button layoutX="264.0" layoutY="287.0" mnemonicParsing="false" onAction="#btnPastelConfirm" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Confirmar" />
+            <Spinner fx:id="spnPasteis1" editable="true" layoutX="324.0" layoutY="59.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnPasteis2" editable="true" layoutX="324.0" layoutY="104.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnPasteis3" editable="true" layoutX="324.0" layoutY="148.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnPasteis4" editable="true" layoutX="324.0" layoutY="194.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnPasteis5" editable="true" layoutX="324.0" layoutY="239.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <ListView fx:id="lstPastel" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="285.0" styleClass="lista" />
+         </children>
+      </Pane>
+      <Pane fx:id="pnlSorvete" layoutX="81.0" layoutY="99.0" prefHeight="337.0" prefWidth="413.0" visible="false">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Sorvetes" />
+            <Button layoutX="264.0" layoutY="287.0" mnemonicParsing="false" onAction="#btnSorveteConfirm" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Confirmar" />
+            <Spinner fx:id="spnSorvetes1" editable="true" layoutX="324.0" layoutY="59.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnSorvetes2" editable="true" layoutX="324.0" layoutY="104.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnSorvetes3" editable="true" layoutX="324.0" layoutY="148.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnSorvetes4" editable="true" layoutX="324.0" layoutY="194.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnSorvetes5" editable="true" layoutX="324.0" layoutY="239.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <ListView fx:id="lstSorvete" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="285.0" styleClass="lista" />
+         </children>
+      </Pane>
+      <Pane fx:id="pnlAlcool" layoutX="81.0" layoutY="99.0" prefHeight="337.0" prefWidth="413.0" visible="false">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Bebidas Alcoolicas" />
+            <Button layoutX="264.0" layoutY="287.0" mnemonicParsing="false" onAction="#btnAlcoolConfirm" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Confirmar" />
+            <Spinner fx:id="spnAlcool1" editable="true" layoutX="324.0" layoutY="59.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnAlcool2" editable="true" layoutX="324.0" layoutY="104.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnAlcool3" editable="true" layoutX="324.0" layoutY="148.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnAlcool4" editable="true" layoutX="324.0" layoutY="194.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnAlcool5" editable="true" layoutX="324.0" layoutY="239.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <ListView fx:id="lstAlcool" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="285.0" styleClass="lista" />
+         </children>
+      </Pane>
+      <Pane fx:id="pnlNAlcool" layoutX="81.0" layoutY="99.0" prefHeight="337.0" prefWidth="413.0" visible="false">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Bebidas Não Alcoolicas" />
+            <Button layoutX="264.0" layoutY="287.0" mnemonicParsing="false" onAction="#btnNAlcoolConfirm" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Confirmar" />
+            <Spinner fx:id="spnNAlcool1" editable="true" layoutX="324.0" layoutY="59.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnNAlcool2" editable="true" layoutX="324.0" layoutY="104.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnNAlcool3" editable="true" layoutX="324.0" layoutY="148.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnNAlcool4" editable="true" layoutX="324.0" layoutY="194.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <Spinner fx:id="spnNAlcool5" editable="true" layoutX="324.0" layoutY="239.0" prefHeight="25.0" prefWidth="61.0" styleClass="spinner" />
+            <ListView fx:id="lstNAlcool" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="285.0" styleClass="lista" />
          </children>
       </Pane>
       </children>
