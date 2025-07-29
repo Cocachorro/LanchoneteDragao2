@@ -144,6 +144,7 @@ public class ControlerMain {
             String produtoFormat=String.format("%s - %.2f", produto.getNome(), produto.getPreco());
             prodExibir.add(produtoFormat);
         }
+        lstEx.setItems(prodExibir);
     }
 
     //Botoes do cardapio
