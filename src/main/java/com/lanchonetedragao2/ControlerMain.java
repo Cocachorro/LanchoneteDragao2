@@ -9,6 +9,8 @@ import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.layout.Pane;
 
+import java.util.List;
+
 public class ControlerMain {
     //Paineis
     @FXML
@@ -93,10 +95,13 @@ public class ControlerMain {
     private Spinner<Integer> spnNAlcool5;
 
     // Lista de dados que será exibida
-    private ObservableList<String> itensDaLista = FXCollections.observableArrayList();
+    private ProdutoDB produtoDB=new ProdutoDB();
 
     @FXML
     public void initialize() {
+        configSpinners();
+    }
+    private void configSpinners(){
         //Config Spinners Sanduiches
         configSpinner(spnSanduiche1);
         configSpinner(spnSanduiche2);
@@ -127,18 +132,26 @@ public class ControlerMain {
         configSpinner(spnNAlcool3);
         configSpinner(spnNAlcool4);
         configSpinner(spnNAlcool5);
-
     }
     private void configSpinner(Spinner<Integer> spinner){
         SpinnerValueFactory<Integer> spn = new SpinnerValueFactory.IntegerSpinnerValueFactory(0,20,0);
         spinner.setValueFactory(spn);
     }
+    private void configLista(String tipo, ListView<String> lstEx){
+        List<Produto> prodDB = produtoDB.buscaProduto(tipo);
+        ObservableList<String> prodExibir= FXCollections.observableArrayList();
+        for(Produto produto:prodDB){
+            String produtoFormat=String.format("%s - %.2f", produto.getNome(), produto.getPreco());
+            prodExibir.add(produtoFormat);
+        }
+    }
 
-    //Acessar o cardápio
+    //Botoes do cardapio
     @FXML
     protected void btnSanduicheClick() {
         pnlMenu.setVisible(false);
         pnlSanduiche.setVisible(true);
+        configLista("sanduiche", lstSanduiche);
     }
     @FXML
     protected void btnPastelClick() {

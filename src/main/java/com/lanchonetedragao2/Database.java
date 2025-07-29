@@ -2,12 +2,10 @@ package com.lanchonetedragao2;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
-public class DataBase {
-    private Connection conectar(){
+public class Database {
+    public static Connection conectar(){
         String url = "jdbc:sqlite:lanchonete.db";
         Connection conn = null;
         try{
