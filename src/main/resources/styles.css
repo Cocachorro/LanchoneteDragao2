@@ -27,6 +27,11 @@
     -fx-font-size: 20px;
     -fx-text-fill: #5D4037;
 }
+.textoPreco{
+    -fx-font-family: 'QuicksandRegular';
+    -fx-font-size: 18px;
+    -fx-text-fill: #5D4037;
+}
 .botao{
     -fx-font-family: 'QuicksandBold';
     -fx-background-color: #eed19d;
@@ -74,4 +79,8 @@
 }
 .spinner .arrow{
     -fx-background-color: #C6422C;
+}
+.achorPane{
+    -fx-background-color: transparent;
+    -fx-border-color: #5D4037;
 }
