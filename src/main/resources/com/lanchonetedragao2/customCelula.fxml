@@ -4,11 +4,11 @@
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="58.0" prefWidth="285.0" styleClass="achorPane" stylesheets="@../../styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lanchonetedragao2.ControlerCelula">
+<AnchorPane prefHeight="59.0" prefWidth="353.0" styleClass="achorPane" stylesheets="@../../styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lanchonetedragao2.ControlerCelula">
    <children>
       <Label fx:id="nome" layoutX="14.0" layoutY="-1.0" styleClass="textoNormal" text="Nome" />
       <Label fx:id="desc" layoutX="14.0" layoutY="31.0" styleClass="secundario" text="Desc" />
-      <Spinner fx:id="spinner" editable="true" layoutX="218.0" layoutY="14.0" prefHeight="29.0" prefWidth="61.0" />
-      <Label fx:id="preco" layoutX="154.0" layoutY="15.0" styleClass="textoPreco" text="R$12,00" />
+      <Spinner fx:id="spinner" editable="true" layoutX="284.0" layoutY="7.0" prefHeight="29.0" prefWidth="61.0" />
+      <Label fx:id="preco" layoutX="220.0" layoutY="8.0" styleClass="textoPreco" text="R$12,00" />
    </children>
 </AnchorPane>

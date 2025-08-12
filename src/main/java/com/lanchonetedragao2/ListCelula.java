@@ -20,8 +20,8 @@ public class ListCelula extends ListCell<Produto> {
             e.printStackTrace();
         }
     }
-
-    protected void attItem(Produto produto, boolean empty){
+    @Override
+    protected void updateItem(Produto produto, boolean empty){
         super.updateItem(produto, empty);
         if (empty || produto == null){
             setGraphic(null);
