@@ -36,7 +36,13 @@ public class ControlerMain {
     @FXML
     private ListView<Produto> lstNAlcool;
 
+    //Carrinho
+    private double valor=0;
+    private String produtinho;
+    private int quantidade;
+
     private ProdutoDB produtoDB = new ProdutoDB();
+    private Carrinho carrinho = new Carrinho();
 
 
     @FXML
