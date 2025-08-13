@@ -113,6 +113,11 @@ public class ControlerMain {
         configPainel(pnlNAlcool);
         addItens("nAlcoolica", lstNAlcool);
     }
+    @FXML
+    protected void btnCarrinhoClick(){
+        configPainel(pnlCarrinho);
+        attCarrinho();
+    }
 }
 /*@FXML
     private ListView<String> minhaLista;
