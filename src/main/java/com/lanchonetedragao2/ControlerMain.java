@@ -11,36 +11,24 @@ import java.util.List;
 
 public class ControlerMain {
     //Paineis
-    @FXML
-    private Pane pnlMenu;
-    @FXML
-    private Pane pnlSanduiche;
-    @FXML
-    private Pane pnlPastel;
-    @FXML
-    private Pane pnlSorvete;
-    @FXML
-    private Pane pnlAlcool;
-    @FXML
-    private Pane pnlNAlcool;
+    @FXML private Pane pnlMenu;
+    @FXML private Pane pnlSanduiche;
+    @FXML private Pane pnlPastel;
+    @FXML private Pane pnlSorvete;
+    @FXML private Pane pnlAlcool;
+    @FXML private Pane pnlNAlcool;
 
     //Listas
-    @FXML
-    private ListView<Produto> lstSanduiche;
-    @FXML
-    private ListView<Produto> lstPastel;
-    @FXML
-    private ListView<Produto> lstSorvete;
-    @FXML
-    private ListView<Produto> lstAlcool;
-    @FXML
-    private ListView<Produto> lstNAlcool;
+    @FXML private ListView<Produto> lstSanduiche;
+    @FXML private ListView<Produto> lstPastel;
+    @FXML private ListView<Produto> lstSorvete;
+    @FXML private ListView<Produto> lstAlcool;
+    @FXML private ListView<Produto> lstNAlcool;
 
     //Carrinho
-    @FXML
-    private Pane pnlCarrinho;
-    @FXML
-    private ListView<String> lstCarrinho;
+    @FXML private Pane pnlCarrinho;
+    @FXML private ListView<String> lstCarrinho;
+    @FXML private Label lblTotal;
 
     private ProdutoDB produtoDB = new ProdutoDB();
     private Carrinho carrinho = new Carrinho();
@@ -49,7 +37,6 @@ public class ControlerMain {
     @FXML
     public void initialize() {
         configListas();
-        pnlMenu.setVisible(true);
     }
 
     private void addItens(String categoria, ListView<Produto> lista){
@@ -60,49 +47,42 @@ public class ControlerMain {
     }
 
     private void configListas(){
-        lstSanduiche.setCellFactory(new Callback<ListView<Produto>, ListCell<Produto>>() {
-            @Override
-            public ListCell<Produto> call(ListView<Produto> ListView) {
-                return new ListCelula();
-            }
-        });
-        lstPastel.setCellFactory(new Callback<ListView<Produto>, ListCell<Produto>>() {
-            @Override
-            public ListCell<Produto> call(ListView<Produto> ListView) {
-                return new ListCelula();
-            }
-        });
-        lstSorvete.setCellFactory(new Callback<ListView<Produto>, ListCell<Produto>>() {
-            @Override
-            public ListCell<Produto> call(ListView<Produto> ListView) {
-                return new ListCelula();
-            }
-        });
-        lstAlcool.setCellFactory(new Callback<ListView<Produto>, ListCell<Produto>>() {
-            @Override
-            public ListCell<Produto> call(ListView<Produto> ListView) {
-                return new ListCelula();
-            }
-        });
-        lstNAlcool.setCellFactory(new Callback<ListView<Produto>, ListCell<Produto>>() {
-            @Override
-            public ListCell<Produto> call(ListView<Produto> ListView) {
-                return new ListCelula();
-            }
-        });
+        Callback<ListView<Produto>, ListCell<Produto>> fabrica = listView -> new ListCelula(this);
+
+        lstSanduiche.setCellFactory(fabrica);
+        lstPastel.setCellFactory(fabrica);
+        lstSorvete.setCellFactory(fabrica);
+        lstAlcool.setCellFactory(fabrica);
+        lstNAlcool.setCellFactory(fabrica);
+    }
+
+    public void addCarrinho(Produto produto, int quantidade){
+        carrinho.addItem(produto.getNome(), quantidade, produto.getPreco());
+        carrinho.addValor(produto.getPreco(), quantidade);
+        attCarrinho();
+    }
+
+    private void attCarrinho(){
+        carrinho.attLista(lstCarrinho);
+        lblTotal.setText(String.format("R$%.2f", carrinho.getTotal()));
     }
 
     //Botoes do cardapio
     @FXML
-    protected void btnVoltarClick(){
+    protected void configPainel(Pane pnlPane){
         pnlSanduiche.setVisible(false);
         pnlSorvete.setVisible(false);
         pnlPastel.setVisible(false);
         pnlAlcool.setVisible(false);
         pnlNAlcool.setVisible(false);
         pnlCarrinho.setVisible(false);
+        pnlMenu.setVisible(false);
 
-        pnlMenu.setVisible(true);
+        pnlPane.setVisible(true);
+    }
+    @FXML
+    protected void btnVoltarClick(){
+        configPainel(pnlMenu);
     }
     @FXML
     protected void btnFinalizarClick(){
@@ -110,32 +90,27 @@ public class ControlerMain {
     }
     @FXML
     protected void btnSanduicheClick() {
-        pnlMenu.setVisible(false);
-        pnlSanduiche.setVisible(true);
+        configPainel(pnlSanduiche);
         addItens("sanduiche", lstSanduiche);
     }
     @FXML
     protected void btnPastelClick() {
-        pnlMenu.setVisible(false);
-        pnlPastel.setVisible(true);
+        configPainel(pnlPastel);
         addItens("pastel", lstPastel);
     }
     @FXML
     protected void btnSorveteClick() {
-        pnlMenu.setVisible(false);
-        pnlSorvete.setVisible(true);
+        configPainel(pnlSorvete);
         addItens("sorvete", lstSorvete);
     }
     @FXML
     protected void btnAlcoolClick() {
-        pnlMenu.setVisible(false);
-        pnlAlcool.setVisible(true);
+        configPainel(pnlAlcool);
         addItens("alcoolica", lstAlcool);
     }
     @FXML
     protected void btnNAlcoolClick() {
-        pnlMenu.setVisible(false);
-        pnlNAlcool.setVisible(true);
+        configPainel(pnlNAlcool);
         addItens("nAlcoolica", lstNAlcool);
     }
 }

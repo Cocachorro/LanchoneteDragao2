@@ -45,6 +45,30 @@
     -fx-text-fill: #C6422C;
     -fx-cursor: hand;
 }
+.botao-voltar{
+    -fx-font-family: 'QuicksandBold';
+    -fx-background-color: #E0E0E0;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px;
+    -fx-font-size: 20px;
+    -fx-text-fill: #757575;
+}
+.botao-voltar:hover{
+    -fx-background-color: #d1d1d1;
+    -fx-cursor: hand;
+}
+.botao-add {
+    -fx-font-family: 'QuicksandBold';
+    -fx-background-color: #A5D6A7;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-font-size: 12px;
+    -fx-text-fill: #388E3C;
+}
+.botao-add:hover {
+    -fx-background-color: #81C784;
+    -fx-cursor: hand;
+}
 .secundario{
     -fx-font-family: 'QuicksandRegular';
     -fx-font-size: 16px;
@@ -58,29 +82,22 @@
     -fx-font-family: 'QuicksandRegular';
     -fx-font-size: 16px;
     -fx-text-fill: #5D4037;
-    -fx-padding: 0 0 20px 0;
     -fx-background-color: transparent;
-}
-.spinner{
-    -fx-font-family: 'QuicksandBold';
-}
-.spinner .text-field{
-    -fx-font-size: 14px;
-    -fx-text-fill: #5D4037;
-    -fx-background-color: white, #eed19d;
-    -fx-background-insets: 0, 1;
-}
-.spinner .arrow-button{
-    -fx-background-color: #eed19d;
-    -fx-background-radius: 0 5 5 0;
-}
-.spinner .arrow-button:hover{
-    -fx-background-color: #dcb97e;
-}
-.spinner .arrow{
-    -fx-background-color: #C6422C;
+    -fx-padding: 5px;
 }
 .achorPane{
+    -fx-background-color: #FFF9C4;
+    -fx-background-radius: 20px;
+}
+.lista-carrinho {
+    -fx-background-color: #FFFDE7;
+    -fx-border-color: #FFF9C4;
+    -fx-border-width: 2px;
+}
+.lista-carrinho .list-cell {
+    -fx-font-family: 'QuicksandRegular';
+    -fx-font-size: 14px;
+    -fx-text-fill: #5D4037;
     -fx-background-color: transparent;
-    -fx-border-color: #5D4037;
+    -fx-padding: 5px;
 }

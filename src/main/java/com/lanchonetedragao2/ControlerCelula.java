@@ -15,14 +15,24 @@ public class ControlerCelula {
     @FXML
     private Spinner<Integer> spinner;
 
-    public void configCelula(Produto produto) {
+    private Produto produto;
+    private ControlerMain controlerMain;
+
+    public void configCelula(Produto produto, ControlerMain controlerMain) {
+        this.produto = produto;
+        this.controlerMain = controlerMain;
+
         nome.setText(produto.getNome());
         desc.setText(produto.getDesc());
         preco.setText(String.format("R$%.2f", produto.getPreco()));
-        SpinnerValueFactory<Integer> spn = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 20, 0);
+
+        SpinnerValueFactory<Integer> spn = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 20, 1);
         spinner.setValueFactory(spn);
     }
-    public int spnQuantidade(){
-        return spinner.getValue();
+    public void btnAddClick() {
+        int quantidade = spinner.getValue();
+        if (controlerMain != null && produto != null) {
+            controlerMain.addCarrinho(produto, quantidade);
+        }
     }
 }

@@ -8,14 +8,15 @@ import java.io.IOException;
 
 public class ListCelula extends ListCell<Produto> {
     private AnchorPane pane;
-    private ControlerCelula controler;
+    private ControlerCelula controlerCelula;
+    private ControlerMain controlerMain;
 
-    public ListCelula(){
+    public ListCelula(ControlerMain controlerMain){
         super();
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("customCelula.fxml"));
             pane = loader.load();
-            controler = loader.getController();
+            controlerCelula = loader.getController();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -26,7 +27,7 @@ public class ListCelula extends ListCell<Produto> {
         if (empty || produto == null){
             setGraphic(null);
         }else {
-            controler.configCelula(produto);
+            controlerCelula.configCelula(produto, controlerMain);
             setGraphic(pane);
         }
     }

@@ -15,8 +15,8 @@
             <Image url="@../../images/imgFundo.png" />
          </image>
       </ImageView>
-      <Label layoutX="114.0" layoutY="15.0" styleClass="titulo" text="Lanchonete Dragão" />
-      <Pane fx:id="pnlMenu" layoutX="71.0" layoutY="89.0" prefHeight="309.0" prefWidth="388.0" visible="false">
+      <Label layoutX="73.0" layoutY="15.0" styleClass="titulo" text="Lanchonete Dragão" />
+      <Pane fx:id="pnlMenu" layoutX="40.0" layoutY="99.0" prefHeight="309.0" prefWidth="388.0">
          <children>
             <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Cardapio" />
             <Label layoutX="23.0" layoutY="64.0" styleClass="textoNormal" text="1- Sanduíche" />
@@ -31,37 +31,37 @@
             <Button layoutX="313.0" layoutY="237.0" mnemonicParsing="false" onAction="#btnNAlcoolClick" prefHeight="15.0" prefWidth="55.0" styleClass="botao" text="-&gt;" />
             </children>
       </Pane>
-      <Pane fx:id="pnlSanduiche" layoutX="71.0" layoutY="89.0" prefHeight="337.0" prefWidth="413.0" visible="false">
+      <Pane fx:id="pnlSanduiche" layoutX="40.0" layoutY="99.0" prefHeight="337.0" prefWidth="480.0" visible="false">
          <children>
             <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Sanduíches" />
-            <ListView fx:id="lstSanduiche" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="371.0" styleClass="lista" />
+            <ListView fx:id="lstSanduiche" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="465.0" styleClass="lista" />
          </children>
       </Pane>
-      <Pane fx:id="pnlPastel" layoutX="81.0" layoutY="99.0" prefHeight="337.0" prefWidth="413.0" visible="false">
+      <Pane fx:id="pnlPastel" layoutX="40.0" layoutY="99.0" prefHeight="337.0" prefWidth="480.0" visible="false">
          <children>
             <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Pasteis" />
-            <ListView fx:id="lstPastel" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="371.0" styleClass="lista" />
+            <ListView fx:id="lstPastel" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="465.0" styleClass="lista" />
          </children>
       </Pane>
-      <Pane fx:id="pnlSorvete" layoutX="81.0" layoutY="99.0" prefHeight="337.0" prefWidth="413.0" visible="false">
+      <Pane fx:id="pnlSorvete" layoutX="40.0" layoutY="99.0" prefHeight="337.0" prefWidth="480.0" visible="false">
          <children>
             <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Sorvetes" />
-            <ListView fx:id="lstSorvete" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="371.0" styleClass="lista" />
+            <ListView fx:id="lstSorvete" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="465.0" styleClass="lista" />
          </children>
       </Pane>
-      <Pane fx:id="pnlAlcool" layoutX="81.0" layoutY="99.0" prefHeight="337.0" prefWidth="413.0" visible="false">
+      <Pane fx:id="pnlAlcool" layoutX="40.0" layoutY="99.0" prefHeight="337.0" prefWidth="480.0" visible="false">
          <children>
             <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Bebidas Alcoolicas" />
-            <ListView fx:id="lstAlcool" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="371.0" styleClass="lista" />
+            <ListView fx:id="lstAlcool" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="465.0" styleClass="lista" />
          </children>
       </Pane>
-      <Pane fx:id="pnlNAlcool" layoutX="81.0" layoutY="99.0" prefHeight="337.0" prefWidth="413.0" visible="false">
+      <Pane fx:id="pnlNAlcool" layoutX="40.0" layoutY="99.0" prefHeight="337.0" prefWidth="480.0" visible="false">
          <children>
             <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Bebidas Não Alcoolicas" />
-            <ListView fx:id="lstNAlcool" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="371.0" styleClass="lista" />
+            <ListView fx:id="lstNAlcool" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="465.0" styleClass="lista" />
          </children>
       </Pane>
-      <Pane fx:id="pnlCarrinho" layoutX="91.0" layoutY="109.0" prefHeight="276.0" prefWidth="413.0">
+      <Pane fx:id="pnlCarrinho" layoutX="50.0" layoutY="109.0" prefHeight="276.0" prefWidth="413.0" visible="false">
          <children>
             <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Carrinho:" />
             <Button layoutX="253.0" layoutY="218.0" mnemonicParsing="false" onAction="#btnFinalizarClick" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Finalizar" />
@@ -69,6 +69,6 @@
             <Label fx:id="lblTotal" layoutX="23.0" layoutY="222.0" styleClass="subTitulo" text="Total" />
          </children>
       </Pane>
-      <Button layoutX="345.0" layoutY="402.0" mnemonicParsing="false" onAction="#btnVoltarClick" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Voltar" />
+      <Button layoutX="395.0" layoutY="436.0" mnemonicParsing="false" onAction="#btnVoltarClick" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Voltar" />
       </children>
 </AnchorPane>
