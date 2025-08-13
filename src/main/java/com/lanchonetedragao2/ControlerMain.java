@@ -119,21 +119,3 @@ public class ControlerMain {
         attCarrinho();
     }
 }
-/*@FXML
-    private ListView<String> minhaLista;
-
-    // Lista de dados que será exibida
-    private ObservableList<String> itensDaLista = FXCollections.observableArrayList();
-
-    @FXML
-    public void initialize() {
-        // Adiciona alguns dados de exemplo à lista
-        itensDaLista.add("Hamburguer de Dragão");
-        itensDaLista.add("Batatas Fritas Encantadas");
-        itensDaLista.add("Poção de Refrigerante");
-        itensDaLista.add("Sobremesa Mágica");
-        itensDaLista.add("Snack dos Aventureiros");
-
-        // Associa os dados à ListView para que eles sejam exibidos
-        minhaLista.setItems(itensDaLista);
-    }*/

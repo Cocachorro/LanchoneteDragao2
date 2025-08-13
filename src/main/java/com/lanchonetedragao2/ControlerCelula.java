@@ -29,7 +29,8 @@ public class ControlerCelula {
         SpinnerValueFactory<Integer> spn = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 20, 1);
         spinner.setValueFactory(spn);
     }
-    public void btnAddClick() {
+    @FXML
+    private void btnAddClick() {
         int quantidade = spinner.getValue();
         if (controlerMain != null && produto != null) {
             controlerMain.addCarrinho(produto, quantidade);

@@ -13,6 +13,7 @@ public class ListCelula extends ListCell<Produto> {
 
     public ListCelula(ControlerMain controlerMain){
         super();
+        this.controlerMain = controlerMain;
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("customCelula.fxml"));
             pane = loader.load();
