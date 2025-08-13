@@ -16,7 +16,7 @@
          </image>
       </ImageView>
       <Label layoutX="114.0" layoutY="15.0" styleClass="titulo" text="Lanchonete Dragão" />
-      <Pane fx:id="pnlMenu" layoutX="71.0" layoutY="89.0" prefHeight="309.0" prefWidth="388.0">
+      <Pane fx:id="pnlMenu" layoutX="71.0" layoutY="89.0" prefHeight="309.0" prefWidth="388.0" visible="false">
          <children>
             <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Cardapio" />
             <Label layoutX="23.0" layoutY="64.0" styleClass="textoNormal" text="1- Sanduíche" />
@@ -34,37 +34,41 @@
       <Pane fx:id="pnlSanduiche" layoutX="71.0" layoutY="89.0" prefHeight="337.0" prefWidth="413.0" visible="false">
          <children>
             <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Sanduíches" />
-            <Button layoutX="264.0" layoutY="287.0" mnemonicParsing="false" onAction="#btnSandConfirm" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Confirmar" />
             <ListView fx:id="lstSanduiche" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="371.0" styleClass="lista" />
          </children>
       </Pane>
       <Pane fx:id="pnlPastel" layoutX="81.0" layoutY="99.0" prefHeight="337.0" prefWidth="413.0" visible="false">
          <children>
             <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Pasteis" />
-            <Button layoutX="264.0" layoutY="287.0" mnemonicParsing="false" onAction="#btnPastelConfirm" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Confirmar" />
             <ListView fx:id="lstPastel" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="371.0" styleClass="lista" />
          </children>
       </Pane>
       <Pane fx:id="pnlSorvete" layoutX="81.0" layoutY="99.0" prefHeight="337.0" prefWidth="413.0" visible="false">
          <children>
             <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Sorvetes" />
-            <Button layoutX="264.0" layoutY="287.0" mnemonicParsing="false" onAction="#btnSorveteConfirm" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Confirmar" />
             <ListView fx:id="lstSorvete" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="371.0" styleClass="lista" />
          </children>
       </Pane>
       <Pane fx:id="pnlAlcool" layoutX="81.0" layoutY="99.0" prefHeight="337.0" prefWidth="413.0" visible="false">
          <children>
             <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Bebidas Alcoolicas" />
-            <Button layoutX="264.0" layoutY="287.0" mnemonicParsing="false" onAction="#btnAlcoolConfirm" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Confirmar" />
             <ListView fx:id="lstAlcool" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="371.0" styleClass="lista" />
          </children>
       </Pane>
       <Pane fx:id="pnlNAlcool" layoutX="81.0" layoutY="99.0" prefHeight="337.0" prefWidth="413.0" visible="false">
          <children>
             <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Bebidas Não Alcoolicas" />
-            <Button layoutX="264.0" layoutY="287.0" mnemonicParsing="false" onAction="#btnNAlcoolConfirm" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Confirmar" />
             <ListView fx:id="lstNAlcool" layoutX="23.0" layoutY="59.0" prefHeight="243.0" prefWidth="371.0" styleClass="lista" />
          </children>
       </Pane>
+      <Pane fx:id="pnlCarrinho" layoutX="91.0" layoutY="109.0" prefHeight="276.0" prefWidth="413.0">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Carrinho:" />
+            <Button layoutX="253.0" layoutY="218.0" mnemonicParsing="false" onAction="#btnFinalizarClick" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Finalizar" />
+            <ListView fx:id="lstCarrinho" layoutX="21.0" layoutY="47.0" prefHeight="161.0" prefWidth="371.0" styleClass="lista" />
+            <Label fx:id="lblTotal" layoutX="23.0" layoutY="222.0" styleClass="subTitulo" text="Total" />
+         </children>
+      </Pane>
+      <Button layoutX="345.0" layoutY="402.0" mnemonicParsing="false" onAction="#btnVoltarClick" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Voltar" />
       </children>
 </AnchorPane>

@@ -37,9 +37,10 @@ public class ControlerMain {
     private ListView<Produto> lstNAlcool;
 
     //Carrinho
-    private double valor=0;
-    private String produtinho;
-    private int quantidade;
+    @FXML
+    private Pane pnlCarrinho;
+    @FXML
+    private ListView<String> lstCarrinho;
 
     private ProdutoDB produtoDB = new ProdutoDB();
     private Carrinho carrinho = new Carrinho();
@@ -48,6 +49,7 @@ public class ControlerMain {
     @FXML
     public void initialize() {
         configListas();
+        pnlMenu.setVisible(true);
     }
 
     private void addItens(String categoria, ListView<Produto> lista){
@@ -92,6 +94,21 @@ public class ControlerMain {
 
     //Botoes do cardapio
     @FXML
+    protected void btnVoltarClick(){
+        pnlSanduiche.setVisible(false);
+        pnlSorvete.setVisible(false);
+        pnlPastel.setVisible(false);
+        pnlAlcool.setVisible(false);
+        pnlNAlcool.setVisible(false);
+        pnlCarrinho.setVisible(false);
+
+        pnlMenu.setVisible(true);
+    }
+    @FXML
+    protected void btnFinalizarClick(){
+
+    }
+    @FXML
     protected void btnSanduicheClick() {
         pnlMenu.setVisible(false);
         pnlSanduiche.setVisible(true);
@@ -120,34 +137,6 @@ public class ControlerMain {
         pnlMenu.setVisible(false);
         pnlNAlcool.setVisible(true);
         addItens("nAlcoolica", lstNAlcool);
-    }
-
-
-    //Botoes de Confirmar
-    @FXML
-    protected void btnSandConfirm() {
-        pnlSanduiche.setVisible(false);
-        pnlMenu.setVisible(true);
-    }
-    @FXML
-    protected void btnPastelConfirm() {
-        pnlPastel.setVisible(false);
-        pnlMenu.setVisible(true);
-    }
-    @FXML
-    protected void btnSorveteConfirm() {
-        pnlSorvete.setVisible(false);
-        pnlMenu.setVisible(true);
-    }
-    @FXML
-    protected void btnAlcoolConfirm() {
-        pnlAlcool.setVisible(false);
-        pnlMenu.setVisible(true);
-    }
-    @FXML
-    protected void btnNAlcoolConfirm() {
-        pnlNAlcool.setVisible(false);
-        pnlMenu.setVisible(true);
     }
 }
 /*@FXML

@@ -14,14 +14,17 @@ public class Carrinho {
     public void addValor(double preco, int quantidade){
         total+=preco*quantidade;
     }
-    public void addItem(String produto, int quantidade, double valor){
-        String formatado = String.format("%d - %s   R$%.2f", quantidade, produto, valor);
+    public void addItem(String produto, int quantidade, double preco){
+        String formatado = String.format("%dx - %s   R$%.2f", quantidade, produto, (preco*quantidade));
         produtos.add(formatado);
     }
-    public void addItens(ListView<String> lista){
+    public void attLista(ListView<String> lista){
         ObservableList<String> itensObs= FXCollections.observableArrayList(produtos);
         lista.setItems(itensObs);
     }
+
+    public double getTotal(){return total;}
+
     public void limparCarrinho(){
         total=0;
         produtos.clear();
