@@ -30,6 +30,15 @@ public class ControlerMain {
     @FXML private ListView<String> lstCarrinho;
     @FXML private Label lblTotal;
 
+    //Final
+    @FXML private Label lblFim1;
+    @FXML private Label lblFim2;
+    @FXML private Label lblSenha;
+    @FXML private Label lblAprovado;
+    @FXML private TextField txtSenha;
+    @FXML private Pane pnlFim;
+    @FXML private Button btnIr;
+
     private ProdutoDB produtoDB = new ProdutoDB();
     private Carrinho carrinho = new Carrinho();
 
@@ -77,6 +86,7 @@ public class ControlerMain {
         pnlNAlcool.setVisible(false);
         pnlCarrinho.setVisible(false);
         pnlMenu.setVisible(false);
+        pnlFim.setVisible(false);
 
         pnlPane.setVisible(true);
     }
@@ -86,7 +96,23 @@ public class ControlerMain {
     }
     @FXML
     protected void btnFinalizarClick(){
-
+        configPainel(pnlFim);
+    }
+    @FXML
+    protected void btnFinalClick(){
+        String senha = txtSenha.getText();
+        if (!senha.equals("admin")){
+            lblAprovado.setText("Senha incorreta!(Tente 'admin')");
+        }
+        else {
+            carrinho.limparCarrinho();
+            lblAprovado.setVisible(false);
+            lblSenha.setVisible(false);
+            txtSenha.setVisible(false);
+            btnIr.setVisible(false);
+            lblFim1.setVisible(true);
+            lblFim2.setVisible(true);
+        }
     }
     @FXML
     protected void btnSanduicheClick() {

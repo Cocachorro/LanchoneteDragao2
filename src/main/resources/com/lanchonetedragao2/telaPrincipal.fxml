@@ -3,10 +3,12 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="898.0" stylesheets="@../../styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lanchonetedragao2.ControlerMain">
    <children>
@@ -16,7 +18,7 @@
          </image>
       </ImageView>
       <Label layoutX="73.0" layoutY="15.0" styleClass="titulo" text="Lanchonete Dragão" />
-      <Pane fx:id="pnlMenu" layoutX="40.0" layoutY="99.0" prefHeight="327.0" prefWidth="388.0">
+      <Pane fx:id="pnlMenu" layoutX="25.0" layoutY="93.0" prefHeight="327.0" prefWidth="388.0" visible="false">
          <children>
             <Label layoutX="23.0" layoutY="14.0" styleClass="subTitulo" text="Cardapio" />
             <Label layoutX="23.0" layoutY="64.0" styleClass="textoNormal" text="1- Sanduíche" />
@@ -72,5 +74,19 @@
          </children>
       </Pane>
       <Button layoutX="395.0" layoutY="436.0" mnemonicParsing="false" onAction="#btnVoltarClick" prefHeight="43.0" prefWidth="136.0" styleClass="botao" text="Voltar" />
+      <Pane fx:id="pnlFim" layoutX="50.0" layoutY="109.0" prefHeight="276.0" prefWidth="413.0">
+         <children>
+            <Label fx:id="lblFim1" layoutX="47.0" layoutY="103.0" styleClass="subTitulo" text="Pedido realizado com sucesso." visible="false" />
+            <Label fx:id="lblFim2" layoutX="66.0" layoutY="138.0" styleClass="subTitulo" text="Obrigado pela preferência!" visible="false" />
+            <Label fx:id="lblSenha" layoutX="79.0" layoutY="86.0" styleClass="subTitulo" text="Digite a senha do cartão:" />
+            <Label fx:id="lblAprovado" alignment="CENTER" layoutX="21.0" layoutY="173.0" prefHeight="35.0" prefWidth="371.0" styleClass="subTitulo" />
+            <TextField fx:id="txtSenha" layoutX="109.0" layoutY="120.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnIr" layoutX="174.0" layoutY="218.0" mnemonicParsing="false" onAction="#btnFinalClick" prefHeight="43.0" prefWidth="64.0" styleClass="botao" text="Ir" />
+         </children>
+      </Pane>
       </children>
 </AnchorPane>
