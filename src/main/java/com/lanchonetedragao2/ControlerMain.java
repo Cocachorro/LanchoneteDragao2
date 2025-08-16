@@ -113,6 +113,7 @@ public class ControlerMain {
             lblFim1.setVisible(true);
             lblFim2.setVisible(true);
         }
+
     }
     @FXML
     protected void btnSanduicheClick() {
